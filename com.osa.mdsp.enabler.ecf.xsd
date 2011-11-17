@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI" xmlns:intf="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI" xmlns:tns1="http://com.osa.mdsp.enabler.sei.exception/SMSEnabler/V2_0" xmlns:tns2="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0" xmlns:tns4="http://com.osa.mdsp.enabler.ecf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://com.osa.mdsp.enabler.ecf">
+  <complexType name="InvocationContext">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="properties" nillable="true" type="xsd:string"/>
+    </sequence>
+  </complexType>
+  <complexType name="EnablerException">
+    <sequence>
+      <element name="errorMessage" nillable="true" type="xsd:string"/>
+      <element name="errorCode" type="xsd:int"/>
+    </sequence>
+  </complexType>
+  <element name="EnablerException" nillable="true" type="tns4:EnablerException"/>
+</schema>
