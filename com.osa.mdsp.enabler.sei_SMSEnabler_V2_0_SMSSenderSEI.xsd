@@ -1,133 +1,158 @@
-<?xml version="1.0"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI" xmlns:intf="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI" xmlns:tns1="http://com.osa.mdsp.enabler.sei.exception/SMSEnabler/V2_0" xmlns:tns2="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0" xmlns:tns4="http://com.osa.mdsp.enabler.ecf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI">
-  <xsd:import namespace="http://com.osa.mdsp.enabler.ecf" schemaLocation="com.osa.mdsp.enabler.ecf.xsd"/>
-  <xsd:import namespace="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0" schemaLocation="com.osa.mdsp.enabler.sei.eto_SMSEnabler_V2_0.xsd"/>
-  <element name="sendSMS">
-    <complexType>
-      <sequence>
-        <element minOccurs="0" name="ctx" nillable="true" type="tns4:InvocationContext"/>
-        <element name="sms" type="tns2:SMSMessageETO"/>
-      </sequence>
-    </complexType>
-  </element>
-  <element name="sendSMSResponse">
-    <complexType>
-      <sequence>
-        <element name="sendSMSReturn" nillable="true" type="xsd:string"/>
-      </sequence>
-    </complexType>
-  </element>
-  <element name="sendSMSWithNotification">
-    <complexType>
-      <sequence>
-        <element minOccurs="0" name="ctx" nillable="true" type="tns4:InvocationContext"/>
-        <element name="sms" type="tns2:SMSMessageETO"/>
-        <element name="notificationURL" type="xsd:string"/>
-      </sequence>
-    </complexType>
-  </element>
-  <element name="sendSMSWithNotificationResponse">
-    <complexType>
-      <sequence>
-        <element name="sendSMSWithNotificationReturn" nillable="true" type="xsd:string"/>
-      </sequence>
-    </complexType>
-  </element>
-  <element name="sendSMSToAlias">
-    <complexType>
-      <sequence>
-        <element minOccurs="0" name="ctx" nillable="true" type="tns4:InvocationContext"/>
-        <element name="sms" type="tns2:SMSMessageETO"/>
-        <element name="serviceId" type="xsd:string"/>
-      </sequence>
-    </complexType>
-  </element>
-  <element name="sendSMSToAliasResponse">
-    <complexType>
-      <sequence>
-        <element name="sendSMSToAliasReturn" nillable="true" type="xsd:string"/>
-      </sequence>
-    </complexType>
-  </element>
-  <element name="sendSMSWithNotificationToAlias">
-    <complexType>
-      <sequence>
-        <element minOccurs="0" name="ctx" nillable="true" type="tns4:InvocationContext"/>
-        <element name="sms" type="tns2:SMSMessageETO"/>
-        <element name="serviceId" type="xsd:string"/>
-        <element name="notificationURL" type="xsd:string"/>
-      </sequence>
-    </complexType>
-  </element>
-  <element name="sendSMSWithNotificationToAliasResponse">
-    <complexType>
-      <sequence>
-        <element name="sendSMSWithNotificationToAliasReturn" nillable="true" type="xsd:string"/>
-      </sequence>
-    </complexType>
-  </element>
-  <element name="sendBinarySMS">
-    <complexType>
-      <sequence>
-        <element minOccurs="0" name="ctx" nillable="true" type="tns4:InvocationContext"/>
-        <element name="sms" type="tns2:SMSBinaryMessageETO"/>
-      </sequence>
-    </complexType>
-  </element>
-  <element name="sendBinarySMSResponse">
-    <complexType>
-      <sequence>
-        <element name="sendBinarySMSReturn" nillable="true" type="xsd:string"/>
-      </sequence>
-    </complexType>
-  </element>
-  <element name="sendBinarySMSWithNotification">
-    <complexType>
-      <sequence>
-        <element minOccurs="0" name="ctx" nillable="true" type="tns4:InvocationContext"/>
-        <element name="sms" type="tns2:SMSBinaryMessageETO"/>
-        <element name="notificationURL" type="xsd:string"/>
-      </sequence>
-    </complexType>
-  </element>
-  <element name="sendBinarySMSWithNotificationResponse">
-    <complexType>
-      <sequence>
-        <element name="sendBinarySMSWithNotificationReturn" nillable="true" type="xsd:string"/>
-      </sequence>
-    </complexType>
-  </element>
-  <element name="sendBinarySMSToAlias">
-    <complexType>
-      <sequence>
-        <element minOccurs="0" name="ctx" nillable="true" type="tns4:InvocationContext"/>
-        <element name="sms" type="tns2:SMSBinaryMessageETO"/>
-        <element name="serviceId" type="xsd:string"/>
-      </sequence>
-    </complexType>
-  </element>
-  <element name="sendBinarySMSToAliasResponse">
-    <complexType>
-      <sequence>
-        <element name="sendBinarySMSToAliasReturn" nillable="true" type="xsd:string"/>
-      </sequence>
-    </complexType>
-  </element>
-  <element name="sendBinarySMSWithNotificationToAlias">
-    <complexType>
-      <sequence>
-        <element minOccurs="0" name="ctx" nillable="true" type="tns4:InvocationContext"/>
-        <element name="sms" type="tns2:SMSBinaryMessageETO"/>
-        <element name="serviceId" type="xsd:string"/>
-        <element name="notificationURL" type="xsd:string"/>
-      </sequence>
-    </complexType>
-  </element>
-  <element name="sendBinarySMSWithNotificationToAliasResponse">
-    <complexType>
-      <sequence>
-        <element name="sendBinarySMSWithNotificationToAliasReturn" nillable="true" type="xsd:string"/>
-      </sequence>
-    </complexType>
-  </element>
-</schema>
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:impl="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI"
+    xmlns:tns2="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0"
+    xmlns:tns4="http://com.osa.mdsp.enabler.ecf"
+    elementFormDefault="qualified"
+    targetNamespace="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI">
+
+    <xsd:import namespace="http://com.osa.mdsp.enabler.ecf"
+        schemaLocation="com.osa.mdsp.enabler.ecf.xsd" />
+    <xsd:import namespace="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0"
+        schemaLocation="com.osa.mdsp.enabler.sei.eto_SMSEnabler_V2_0.xsd" />
+
+    <xsd:element name="sendSMS">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ctx" minOccurs="0" nillable="true"
+                    type="tns4:InvocationContext" />
+                <xsd:element name="sms" type="tns2:SMSMessageETO" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="sendSMSResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="sendSMSReturn" nillable="true"
+                    type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="sendSMSWithNotification">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ctx" minOccurs="0" nillable="true"
+                    type="tns4:InvocationContext" />
+                <xsd:element name="sms" type="tns2:SMSMessageETO" />
+                <xsd:element name="notificationURL" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="sendSMSWithNotificationResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="sendSMSWithNotificationReturn"
+                    nillable="true" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="sendSMSToAlias">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ctx" minOccurs="0" nillable="true"
+                    type="tns4:InvocationContext" />
+                <xsd:element name="sms" type="tns2:SMSMessageETO" />
+                <xsd:element name="serviceId" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="sendSMSToAliasResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="sendSMSToAliasReturn" nillable="true"
+                    type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="sendSMSWithNotificationToAlias">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ctx" minOccurs="0" nillable="true"
+                    type="tns4:InvocationContext" />
+                <xsd:element name="sms" type="tns2:SMSMessageETO" />
+                <xsd:element name="serviceId" type="xsd:string" />
+                <xsd:element name="notificationURL" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="sendSMSWithNotificationToAliasResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="sendSMSWithNotificationToAliasReturn"
+                    nillable="true" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="sendBinarySMS">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ctx" minOccurs="0" nillable="true"
+                    type="tns4:InvocationContext" />
+                <xsd:element name="sms" type="tns2:SMSBinaryMessageETO" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="sendBinarySMSResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="sendBinarySMSReturn" nillable="true"
+                    type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="sendBinarySMSWithNotification">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ctx" minOccurs="0" nillable="true"
+                    type="tns4:InvocationContext" />
+                <xsd:element name="sms" type="tns2:SMSBinaryMessageETO" />
+                <xsd:element name="notificationURL" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="sendBinarySMSWithNotificationResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="sendBinarySMSWithNotificationReturn"
+                    nillable="true" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="sendBinarySMSToAlias">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ctx" minOccurs="0" nillable="true"
+                    type="tns4:InvocationContext" />
+                <xsd:element name="sms" type="tns2:SMSBinaryMessageETO" />
+                <xsd:element name="serviceId" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="sendBinarySMSToAliasResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="sendBinarySMSToAliasReturn"
+                    nillable="true" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="sendBinarySMSWithNotificationToAlias">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ctx" minOccurs="0" nillable="true"
+                    type="tns4:InvocationContext" />
+                <xsd:element name="sms" type="tns2:SMSBinaryMessageETO" />
+                <xsd:element name="serviceId" type="xsd:string" />
+                <xsd:element name="notificationURL" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="sendBinarySMSWithNotificationToAliasResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="sendBinarySMSWithNotificationToAliasReturn"
+                    nillable="true" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

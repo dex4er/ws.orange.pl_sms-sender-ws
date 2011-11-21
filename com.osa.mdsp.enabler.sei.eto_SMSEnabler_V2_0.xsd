@@ -1,33 +1,56 @@
-<?xml version="1.0"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI" xmlns:intf="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI" xmlns:tns1="http://com.osa.mdsp.enabler.sei.exception/SMSEnabler/V2_0" xmlns:tns2="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0" xmlns:tns4="http://com.osa.mdsp.enabler.ecf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0">
-  <complexType name="SMSMessageETO">
-    <sequence>
-      <element name="content" type="xsd:string"/>
-      <element minOccurs="0" name="earliestDeliveryTime" nillable="true" type="xsd:dateTime"/>
-      <element minOccurs="0" name="expiryDate" nillable="true" type="xsd:dateTime"/>
-      <element minOccurs="0" name="priority" nillable="true" type="xsd:string"/>
-      <element name="recipient" type="xsd:string"/>
-      <element minOccurs="0" name="senderAddress" nillable="true" type="xsd:string"/>
-      <element minOccurs="0" name="contentSentEncoding" nillable="true" type="xsd:string"/>
-      <element minOccurs="0" name="flash" nillable="true" type="xsd:boolean"/>
-      <element minOccurs="0" name="originatingPort" nillable="true" type="xsd:int"/>
-      <element minOccurs="0" name="destinationPort" nillable="true" type="xsd:int"/>
-      <element minOccurs="0" name="pid" nillable="true" type="xsd:int"/>
-      <element minOccurs="0" name="dcs" nillable="true" type="xsd:int"/>
-    </sequence>
-  </complexType>
-  <complexType name="SMSBinaryMessageETO">
-    <sequence>
-      <element default="true" minOccurs="0" name="hasUdh" nillable="true" type="xsd:boolean"/>
-      <element maxOccurs="unbounded" name="content" type="xsd:string"/>
-      <element minOccurs="0" name="earliestDeliveryTime" nillable="true" type="xsd:dateTime"/>
-      <element minOccurs="0" name="expiryDate" nillable="true" type="xsd:dateTime"/>
-      <element minOccurs="0" name="priority" nillable="true" type="xsd:string"/>
-      <element name="recipient" type="xsd:string"/>
-      <element minOccurs="0" name="senderAddress" nillable="true" type="xsd:string"/>
-      <element minOccurs="0" name="dcs" nillable="true" type="xsd:int"/>
-      <element minOccurs="0" name="msgidmo" nillable="true" type="xsd:string"/>
-      <element minOccurs="0" name="pid" nillable="true" type="xsd:int"/>
-    </sequence>
-  </complexType>
-</schema>
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns2="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0"    
+    elementFormDefault="qualified"
+    targetNamespace="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0">
+
+    <xsd:complexType name="SMSMessageETO">
+        <xsd:sequence>
+            <xsd:element name="content" type="xsd:string" />
+            <xsd:element name="earliestDeliveryTime" minOccurs="0"
+                nillable="true" type="xsd:dateTime" />
+            <xsd:element name="expiryDate" minOccurs="0" nillable="true"
+                type="xsd:dateTime" />
+            <xsd:element name="priority" minOccurs="0" nillable="true"
+                type="xsd:string" />
+            <xsd:element name="recipient" type="xsd:string" />
+            <xsd:element name="senderAddress" minOccurs="0"
+                nillable="true" type="xsd:string" />
+            <xsd:element name="contentSentEncoding" minOccurs="0"
+                nillable="true" type="xsd:string" />
+            <xsd:element name="flash" minOccurs="0" nillable="true"
+                type="xsd:boolean" />
+            <xsd:element name="originatingPort" minOccurs="0"
+                nillable="true" type="xsd:int" />
+            <xsd:element name="destinationPort" minOccurs="0"
+                nillable="true" type="xsd:int" />
+            <xsd:element name="pid" minOccurs="0" nillable="true"
+                type="xsd:int" />
+            <xsd:element name="dcs" minOccurs="0" nillable="true"
+                type="xsd:int" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="SMSBinaryMessageETO">
+        <xsd:sequence>
+            <xsd:element name="hasUdh" minOccurs="0" nillable="true"
+                default="true" type="xsd:boolean" />
+            <xsd:element maxOccurs="unbounded" name="content"
+                type="xsd:string" />
+            <xsd:element name="earliestDeliveryTime" minOccurs="0"
+                nillable="true" type="xsd:dateTime" />
+            <xsd:element name="expiryDate" minOccurs="0" nillable="true"
+                type="xsd:dateTime" />
+            <xsd:element name="priority" minOccurs="0" nillable="true"
+                type="xsd:string" />
+            <xsd:element name="recipient" type="xsd:string" />
+            <xsd:element name="senderAddress" minOccurs="0"
+                nillable="true" type="xsd:string" />
+            <xsd:element name="dcs" minOccurs="0" nillable="true"
+                type="xsd:int" />
+            <xsd:element name="msgidmo" minOccurs="0" nillable="true"
+                type="xsd:string" />
+            <xsd:element name="pid" minOccurs="0" nillable="true"
+                type="xsd:int" />
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

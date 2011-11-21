@@ -1,10 +1,14 @@
-<?xml version="1.0"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI" xmlns:intf="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI" xmlns:tns1="http://com.osa.mdsp.enabler.sei.exception/SMSEnabler/V2_0" xmlns:tns2="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0" xmlns:tns4="http://com.osa.mdsp.enabler.ecf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://com.osa.mdsp.enabler.sei.exception/SMSEnabler/V2_0">
-  <complexType name="SMSException">
-    <sequence>
-      <element name="errorCode" type="xsd:int"/>
-      <element name="message" nillable="true" type="xsd:string"/>
-    </sequence>
-  </complexType>
-  <element name="SMSException" nillable="true" type="tns1:SMSException"/>
-</schema>
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns1="http://com.osa.mdsp.enabler.sei.exception/SMSEnabler/V2_0"
+    elementFormDefault="qualified"
+    targetNamespace="http://com.osa.mdsp.enabler.sei.exception/SMSEnabler/V2_0">
+
+    <xsd:complexType name="SMSException">
+        <xsd:sequence>
+            <xsd:element name="errorCode" type="xsd:int" />
+            <xsd:element name="message" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="SMSException" nillable="true" type="tns1:SMSException" />
+</xsd:schema>

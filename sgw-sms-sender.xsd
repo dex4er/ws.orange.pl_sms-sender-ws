@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="unqualified">
+    <xsd:import namespace="http://com.osa.mdsp.enabler.ecf"
+        schemaLocation="com.osa.mdsp.enabler.ecf.xsd" />
+    <xsd:import namespace="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI"
+        schemaLocation="com.osa.mdsp.enabler.sei_SMSEnabler_V2_0_SMSSenderSEI.xsd" />
+    <xsd:import namespace="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0"
+        schemaLocation="com.osa.mdsp.enabler.sei.eto_SMSEnabler_V2_0.xsd" />
+    <xsd:import namespace="http://com.osa.mdsp.enabler.sei.exception/SMSEnabler/V2_0"
+        schemaLocation="com.osa.mdsp.enabler.sei.exception_SMSEnabler_V2_0.xsd" />
+</xsd:schema>
