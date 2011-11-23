@@ -521,7 +521,7 @@
     <wsdl:service name="SMSSenderEnablerRemoteService_V2_0">
         <wsdl:port binding="impl:SMSSenderEnablerRemoteSoapBinding_V2_0"
             name="SMSSenderEnablerRemote_V2_0">
-            <wsdlsoap:address location="http://sgw-sc:8380/jbossws/services" />
+            <wsdlsoap:address location="http://sgw-sc:8380/security-backend/services/smsEnabler" />
         </wsdl:port>
     </wsdl:service>
 
