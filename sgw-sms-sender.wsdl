@@ -4,7 +4,7 @@
     xmlns:tns1="http://com.osa.mdsp.enabler.sei.exception/SMSEnabler/V2_0"
     xmlns:tns2="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0"
     xmlns:tns4="http://com.osa.mdsp.enabler.ecf"
-    xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI">
 
@@ -394,126 +394,126 @@
 
     <wsdl:binding name="SMSSenderEnablerRemoteSoapBinding_V2_0"
         type="impl:SMSSenderEnablerRemote_V2_0">
-        <wsdlsoap:binding style="document"
+        <soap:binding style="document"
             transport="http://schemas.xmlsoap.org/soap/http" />
         <wsdl:operation name="sendSMS">
-            <wsdlsoap:operation soapAction="" />
+            <soap:operation soapAction="" />
             <wsdl:input name="sendSMSRequest">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:input>
             <wsdl:output name="sendSMSResponse">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:output>
             <wsdl:fault name="SMSException">
-                <wsdlsoap:fault name="SMSException" use="literal" />
+                <soap:fault name="SMSException" use="literal" />
             </wsdl:fault>
             <wsdl:fault name="EnablerException">
-                <wsdlsoap:fault name="EnablerException" use="literal" />
+                <soap:fault name="EnablerException" use="literal" />
             </wsdl:fault>
         </wsdl:operation>
         <wsdl:operation name="sendSMSWithNotification">
-            <wsdlsoap:operation soapAction="" />
+            <soap:operation soapAction="" />
             <wsdl:input name="sendSMSWithNotificationRequest">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:input>
             <wsdl:output name="sendSMSWithNotificationResponse">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:output>
             <wsdl:fault name="SMSException">
-                <wsdlsoap:fault name="SMSException" use="literal" />
+                <soap:fault name="SMSException" use="literal" />
             </wsdl:fault>
             <wsdl:fault name="EnablerException">
-                <wsdlsoap:fault name="EnablerException" use="literal" />
+                <soap:fault name="EnablerException" use="literal" />
             </wsdl:fault>
         </wsdl:operation>
         <wsdl:operation name="sendSMSToAlias">
-            <wsdlsoap:operation soapAction="" />
+            <soap:operation soapAction="" />
             <wsdl:input name="sendSMSToAliasRequest">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:input>
             <wsdl:output name="sendSMSToAliasResponse">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:output>
             <wsdl:fault name="SMSException">
-                <wsdlsoap:fault name="SMSException" use="literal" />
+                <soap:fault name="SMSException" use="literal" />
             </wsdl:fault>
             <wsdl:fault name="EnablerException">
-                <wsdlsoap:fault name="EnablerException" use="literal" />
+                <soap:fault name="EnablerException" use="literal" />
             </wsdl:fault>
         </wsdl:operation>
         <wsdl:operation name="sendSMSWithNotificationToAlias">
-            <wsdlsoap:operation soapAction="" />
+            <soap:operation soapAction="" />
             <wsdl:input name="sendSMSWithNotificationToAliasRequest">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:input>
             <wsdl:output name="sendSMSWithNotificationToAliasResponse">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:output>
             <wsdl:fault name="SMSException">
-                <wsdlsoap:fault name="SMSException" use="literal" />
+                <soap:fault name="SMSException" use="literal" />
             </wsdl:fault>
             <wsdl:fault name="EnablerException">
-                <wsdlsoap:fault name="EnablerException" use="literal" />
+                <soap:fault name="EnablerException" use="literal" />
             </wsdl:fault>
         </wsdl:operation>
         <wsdl:operation name="sendBinarySMS">
-            <wsdlsoap:operation soapAction="" />
+            <soap:operation soapAction="" />
             <wsdl:input name="sendBinarySMSRequest">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:input>
             <wsdl:output name="sendBinarySMSResponse">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:output>
             <wsdl:fault name="SMSException">
-                <wsdlsoap:fault name="SMSException" use="literal" />
+                <soap:fault name="SMSException" use="literal" />
             </wsdl:fault>
             <wsdl:fault name="EnablerException">
-                <wsdlsoap:fault name="EnablerException" use="literal" />
+                <soap:fault name="EnablerException" use="literal" />
             </wsdl:fault>
         </wsdl:operation>
         <wsdl:operation name="sendBinarySMSWithNotification">
-            <wsdlsoap:operation soapAction="" />
+            <soap:operation soapAction="" />
             <wsdl:input name="sendBinarySMSWithNotificationRequest">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:input>
             <wsdl:output name="sendBinarySMSWithNotificationResponse">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:output>
             <wsdl:fault name="SMSException">
-                <wsdlsoap:fault name="SMSException" use="literal" />
+                <soap:fault name="SMSException" use="literal" />
             </wsdl:fault>
             <wsdl:fault name="EnablerException">
-                <wsdlsoap:fault name="EnablerException" use="literal" />
+                <soap:fault name="EnablerException" use="literal" />
             </wsdl:fault>
         </wsdl:operation>
         <wsdl:operation name="sendBinarySMSToAlias">
-            <wsdlsoap:operation soapAction="" />
+            <soap:operation soapAction="" />
             <wsdl:input name="sendBinarySMSToAliasRequest">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:input>
             <wsdl:output name="sendBinarySMSToAliasResponse">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:output>
             <wsdl:fault name="SMSException">
-                <wsdlsoap:fault name="SMSException" use="literal" />
+                <soap:fault name="SMSException" use="literal" />
             </wsdl:fault>
             <wsdl:fault name="EnablerException">
-                <wsdlsoap:fault name="EnablerException" use="literal" />
+                <soap:fault name="EnablerException" use="literal" />
             </wsdl:fault>
         </wsdl:operation>
         <wsdl:operation name="sendBinarySMSWithNotificationToAlias">
-            <wsdlsoap:operation soapAction="" />
+            <soap:operation soapAction="" />
             <wsdl:input name="sendBinarySMSWithNotificationToAliasRequest">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:input>
             <wsdl:output name="sendBinarySMSWithNotificationToAliasResponse">
-                <wsdlsoap:body use="literal" />
+                <soap:body use="literal" />
             </wsdl:output>
             <wsdl:fault name="SMSException">
-                <wsdlsoap:fault name="SMSException" use="literal" />
+                <soap:fault name="SMSException" use="literal" />
             </wsdl:fault>
             <wsdl:fault name="EnablerException">
-                <wsdlsoap:fault name="EnablerException" use="literal" />
+                <soap:fault name="EnablerException" use="literal" />
             </wsdl:fault>
         </wsdl:operation>
     </wsdl:binding>
@@ -521,7 +521,7 @@
     <wsdl:service name="SMSSenderEnablerRemoteService_V2_0">
         <wsdl:port binding="impl:SMSSenderEnablerRemoteSoapBinding_V2_0"
             name="SMSSenderEnablerRemote_V2_0">
-            <wsdlsoap:address location="http://sgw-sc:8380/security-backend/services/smsEnabler" />
+            <soap:address location="http://sgw-sc:8380/security-backend/services/smsEnabler" />
         </wsdl:port>
     </wsdl:service>
 
