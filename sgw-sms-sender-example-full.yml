@@ -1,0 +1,18 @@
+---
+sendSMS:
+  ctx:
+    properties:
+      - "example"
+  sms:
+    content: example
+    contentSentEncoding: "example"
+    dcs: 42
+    destinationPort: 42
+    earliestDeliveryTime: 2006-10-06T00:23:02Z
+    expiryDate: 2006-10-06T00:23:02Z
+    flash: 1
+    originatingPort: 42
+    pid: 42
+    priority: "example"
+    recipient: example
+    senderAddress: "example"

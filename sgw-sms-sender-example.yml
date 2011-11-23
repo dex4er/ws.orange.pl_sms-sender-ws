@@ -1,0 +1,5 @@
+---
+sendSMS:
+  sms:
+    content: TEST
+    recipient: 507998000
