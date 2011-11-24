@@ -1,64 +1,63 @@
-<x0:sendSMS xmlns:tns2="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0" xmlns:tns4="http://com.osa.mdsp.enabler.ecf" xmlns:x0="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="unnamed complex">
+<smsi:sendSMS xmlns:enae="http://com.osa.mdsp.enabler.ecf" xmlns:smse="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0" xmlns:smsi="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="unnamed complex">
   <!-- BE WARNED: in most cases, the example below cannot be used without
-       interpretation.  The comments will guide you.
-       Produced by XML::Compile::Translate::Template version 1.22
-                on Tue Nov 22 15:25:10 2011
+  interpretation. The comments will guide you.
+  Produced by XML::Compile::Translate::Template version 1.23 on Thu Nov 24 13:33:36 2011
     -->
-  <!-- sequence of x0:ctx, x0:sms -->
-  <x0:ctx xsi:type="tns4:InvocationContext">
+  <!-- sequence of smsi:ctx, smsi:sms -->
+  <smsi:ctx xsi:type="enae:InvocationContext">
     <!-- is nillable -->
-    <!-- sequence of tns4:properties -->
-    <tns4:properties xsi:type="xs:string">
+    <!-- sequence of enae:properties -->
+    <enae:properties xsi:type="xs:string">
       <!-- is nillable -->
       example
-    </tns4:properties>
-  </x0:ctx>
-  <x0:sms xsi:type="tns2:SMSMessageETO">
-    <!-- sequence of tns2:content, tns2:earliestDeliveryTime,
-           tns2:expiryDate, tns2:priority, tns2:recipient,
-           tns2:senderAddress, tns2:contentSentEncoding, tns2:flash,
-           tns2:originatingPort, tns2:destinationPort, tns2:pid, tns2:dcs -->
-    <tns2:content xsi:type="xs:string">example</tns2:content>
-    <tns2:earliestDeliveryTime xsi:type="xs:dateTime">
+    </enae:properties>
+  </smsi:ctx>
+  <smsi:sms xsi:type="smse:SMSMessageETO">
+    <!-- sequence of smse:content, smse:earliestDeliveryTime,
+           smse:expiryDate, smse:priority, smse:recipient,
+           smse:senderAddress, smse:contentSentEncoding, smse:flash,
+           smse:originatingPort, smse:destinationPort, smse:pid, smse:dcs -->
+    <smse:content xsi:type="xs:string">example</smse:content>
+    <smse:earliestDeliveryTime xsi:type="xs:dateTime">
       <!-- is nillable -->
       2006-10-06T00:23:02Z
-    </tns2:earliestDeliveryTime>
-    <tns2:expiryDate xsi:type="xs:dateTime">
+    </smse:earliestDeliveryTime>
+    <smse:expiryDate xsi:type="xs:dateTime">
       <!-- is nillable -->
       2006-10-06T00:23:02Z
-    </tns2:expiryDate>
-    <tns2:priority xsi:type="xs:string">
+    </smse:expiryDate>
+    <smse:priority xsi:type="xs:string">
       <!-- is nillable -->
       example
-    </tns2:priority>
-    <tns2:recipient xsi:type="xs:string">example</tns2:recipient>
-    <tns2:senderAddress xsi:type="xs:string">
+    </smse:priority>
+    <smse:recipient xsi:type="xs:string">example</smse:recipient>
+    <smse:senderAddress xsi:type="xs:string">
       <!-- is nillable -->
       example
-    </tns2:senderAddress>
-    <tns2:contentSentEncoding xsi:type="xs:string">
+    </smse:senderAddress>
+    <smse:contentSentEncoding xsi:type="xs:string">
       <!-- is nillable -->
       example
-    </tns2:contentSentEncoding>
-    <tns2:flash xsi:type="xs:boolean">
+    </smse:contentSentEncoding>
+    <smse:flash xsi:type="xs:boolean">
       <!-- is nillable -->
       true
-    </tns2:flash>
-    <tns2:originatingPort xsi:type="xs:int">
+    </smse:flash>
+    <smse:originatingPort xsi:type="xs:int">
       <!-- is nillable -->
       42
-    </tns2:originatingPort>
-    <tns2:destinationPort xsi:type="xs:int">
+    </smse:originatingPort>
+    <smse:destinationPort xsi:type="xs:int">
       <!-- is nillable -->
       42
-    </tns2:destinationPort>
-    <tns2:pid xsi:type="xs:int">
+    </smse:destinationPort>
+    <smse:pid xsi:type="xs:int">
       <!-- is nillable -->
       42
-    </tns2:pid>
-    <tns2:dcs xsi:type="xs:int">
+    </smse:pid>
+    <smse:dcs xsi:type="xs:int">
       <!-- is nillable -->
       42
-    </tns2:dcs>
-  </x0:sms>
-</x0:sendSMS>
+    </smse:dcs>
+  </smsi:sms>
+</smsi:sendSMS>
