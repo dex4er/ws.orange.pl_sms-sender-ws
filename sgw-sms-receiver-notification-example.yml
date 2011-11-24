@@ -1,0 +1,7 @@
+---
+sendSMSNotification:
+  sms:
+    fromMsisdn: example
+    nrLa: 6016
+    status: success
+    transactionId: 123456789abcdef0

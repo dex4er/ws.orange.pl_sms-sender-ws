@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:smri="http://pl.net.amg.hdl.sei/SMSReceiver"
+    xmlns:smni="http://pl.net.amg.hdl.sei/SMSNotification"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://pl.net.amg.hdl.sei/SMSReceiver">
+
+    <wsdl:types>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:smnt="http://pl.net.amg.hdl.sei.eto/SMSNotification"
+            elementFormDefault="qualified"
+            targetNamespace="http://pl.net.amg.hdl.sei.eto/SMSNotification">
+
+            <xsd:complexType name="SMSNotificationETO">
+                <xsd:sequence>
+                    <xsd:element name="nrLa" minOccurs="1" nillable="true"
+                        type="xsd:string" />
+                    <xsd:element name="fromMsisdn" minOccurs="1" type="xsd:string" />
+                    <xsd:element name="transactionId" minOccurs="1"
+                        type="xsd:string" />
+                    <xsd:element name="status" minOccurs="1" type="xsd:string" />
+                </xsd:sequence>
+            </xsd:complexType>
+
+        </xsd:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:smni="http://pl.net.amg.hdl.sei/SMSNotification"
+            xmlns:smnt="http://pl.net.amg.hdl.sei.eto/SMSNotification"
+            elementFormDefault="qualified"
+            targetNamespace="http://pl.net.amg.hdl.sei/SMSNotification">
+
+            <xsd:import namespace="http://pl.net.amg.hdl.sei.eto/SMSNotification"
+                schemaLocation="pl.net.amg.hdl.sei.eto_SMSNotification.xsd" />
+
+            <xsd:element name="sendSMSNotification">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="sms" type="smnt:SMSNotificationETO" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="sendSMSNotificationResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="sendSMSNotificationReturn"
+                            nillable="true" type="xsd:boolean" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+        </xsd:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:smrt="http://pl.net.amg.hdl.sei.eto/SMSReceiver"
+            elementFormDefault="qualified"
+            targetNamespace="http://pl.net.amg.hdl.sei.eto/SMSReceiver">
+
+            <xsd:complexType name="SMSReceiverETO">
+                <xsd:sequence>
+                    <xsd:element name="toLa" minOccurs="1" type="xsd:string" />
+                    <xsd:element name="fromMsisdn" minOccurs="1" type="xsd:string" />
+                    <xsd:element name="content" minOccurs="1" type="xsd:string" />
+                </xsd:sequence>
+            </xsd:complexType>
+
+        </xsd:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:smri="http://pl.net.amg.hdl.sei/SMSReceiver"
+            xmlns:smrt="http://pl.net.amg.hdl.sei.eto/SMSReceiver"
+            elementFormDefault="qualified"
+            targetNamespace="http://pl.net.amg.hdl.sei/SMSReceiver">
+
+            <xsd:import namespace="http://pl.net.amg.hdl.sei.eto/SMSReceiver"
+                schemaLocation="pl.net.amg.hdl.sei.eto_SMSReceiver.xsd" />
+
+            <xsd:element name="sendSMSReceiver">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="sms" type="smrt:SMSReceiverETO" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="sendSMSReceiverResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="sendSMSReceiverReturn"
+                            nillable="true" type="xsd:boolean" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+
+    <wsdl:message name="sendSMSReceiverResponse">
+        <wsdl:part element="smri:sendSMSReceiverResponse" name="sendSMSReceiverResponse" />
+    </wsdl:message>
+    <wsdl:message name="sendSMSReceiverRequest">
+        <wsdl:part element="smri:sendSMSReceiver" name="sendSMSReceiverRequest" />
+    </wsdl:message>
+    <wsdl:message name="sendSMSNotificationResponse">
+        <wsdl:part element="smni:sendSMSNotificationResponse" name="sendSMSNotificationResponse" />
+    </wsdl:message>
+    <wsdl:message name="sendSMSNotificationRequest">
+        <wsdl:part element="smni:sendSMSNotification" name="sendSMSNotificationRequest" />
+    </wsdl:message>
+
+    <wsdl:portType name="SMSReceiverPort">
+        <wsdl:operation name="sendSMSReceiver">
+            <wsdl:input message="smri:sendSMSReceiverRequest" name="sendSMSReceiverRequest" />
+            <wsdl:output message="smri:sendSMSReceiverResponse"
+                name="sendSMSReceiverResponse" />
+        </wsdl:operation>
+        <wsdl:operation name="sendSMSNotification">
+            <wsdl:input message="smri:sendSMSNotificationRequest"
+                name="sendSMSNotificationRequest" />
+            <wsdl:output message="smri:sendSMSNotificationResponse"
+                name="sendSMSNotificationResponse" />
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:binding name="SMSReceiverSoapBinding" type="smri:SMSReceiverPort">
+        <soap:binding style="document"
+            transport="http://schemas.xmlsoap.org/soap/http" />
+        <wsdl:operation name="sendSMSReceiver">
+            <soap:operation soapAction="sendSMSReceiver" style="document" />
+            <wsdl:input name="sendSMSReceiverRequest">
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output name="sendSMSReceiverResponse">
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="sendSMSNotification">
+            <soap:operation soapAction="sendSMSNotification"
+                style="document" />
+            <wsdl:input name="sendSMSNotificationRequest">
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output name="sendSMSNotificationResponse">
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:service name="SMSReceiverService">
+        <wsdl:port binding="smri:SMSReceiverSoapBinding" name="SMSReceiverPort">
+            <soap:address location="http://localhost:8980/services/SMSReceiver" />
+        </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>

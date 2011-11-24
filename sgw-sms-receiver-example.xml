@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <smri:sendSMSReceiver xmlns:smri="http://pl.net.amg.hdl.sei/SMSReceiver" xmlns:smrt="http://pl.net.amg.hdl.sei.eto/SMSReceiver">
+      <smri:sms>
+        <smrt:toLa>6016</smrt:toLa>
+        <smrt:fromMsisdn>507998000</smrt:fromMsisdn>
+        <smrt:content>TEST</smrt:content>
+      </smri:sms>
+    </smri:sendSMSReceiver>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <smni:sendSMSNotification xmlns:smni="http://pl.net.amg.hdl.sei/SMSNotification" xmlns:smnt="http://pl.net.amg.hdl.sei.eto/SMSNotification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <smni:sms>
+        <smnt:nrLa>6016</smnt:nrLa>
+        <smnt:fromMsisdn>example</smnt:fromMsisdn>
+        <smnt:transactionId>123456789abcdef0</smnt:transactionId>
+        <smnt:status>success</smnt:status>
+      </smni:sms>
+    </smni:sendSMSNotification>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

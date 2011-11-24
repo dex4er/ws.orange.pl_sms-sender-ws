@@ -1,0 +1,6 @@
+---
+sendSMSReceiver:
+  sms:
+    toLa: 6016
+    fromMsisdn: 507998000
+    content: TEST

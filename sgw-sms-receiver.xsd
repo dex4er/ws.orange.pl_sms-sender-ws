@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="unqualified">
+    <xsd:import namespace="http://pl.net.amg.hdl.sei.eto/SMSNotification"
+        schemaLocation="pl.net.amg.hdl.sei.eto_SMSNotification.xsd" />
+    <xsd:import namespace="http://pl.net.amg.hdl.sei/SMSNotification"
+        schemaLocation="pl.net.amg.hdl.sei_SMSNotification.xsd" />
+    <xsd:import namespace="http://pl.net.amg.hdl.sei.eto/SMSReceiver"
+        schemaLocation="pl.net.amg.hdl.sei.eto_SMSReceiver.xsd" />
+    <xsd:import namespace="http://pl.net.amg.hdl.sei/SMSReceiver"
+        schemaLocation="pl.net.amg.hdl.sei_SMSReceiver.xsd" />
+</xsd:schema>
