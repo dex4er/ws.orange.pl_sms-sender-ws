@@ -1,7 +1,7 @@
-<smsi:sendSMS xmlns:enae="http://com.osa.mdsp.enabler.ecf" xmlns:smse="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0" xmlns:smsi="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="unnamed complex">
+<smsi:sendSMS xmlns:enae="http://com.osa.mdsp.enabler.ecf" xmlns:smst="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0" xmlns:smsi="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="unnamed complex">
   <!-- BE WARNED: in most cases, the example below cannot be used without
   interpretation. The comments will guide you.
-  Produced by XML::Compile::Translate::Template version 1.23 on Thu Nov 24 13:33:36 2011
+  Produced by XML::Compile::Translate::Template version 1.23 on Thu Nov 24 14:34:29 2011
     -->
   <!-- sequence of smsi:ctx, smsi:sms -->
   <smsi:ctx xsi:type="enae:InvocationContext">
@@ -12,52 +12,52 @@
       example
     </enae:properties>
   </smsi:ctx>
-  <smsi:sms xsi:type="smse:SMSMessageETO">
-    <!-- sequence of smse:content, smse:earliestDeliveryTime,
-           smse:expiryDate, smse:priority, smse:recipient,
-           smse:senderAddress, smse:contentSentEncoding, smse:flash,
-           smse:originatingPort, smse:destinationPort, smse:pid, smse:dcs -->
-    <smse:content xsi:type="xs:string">example</smse:content>
-    <smse:earliestDeliveryTime xsi:type="xs:dateTime">
+  <smsi:sms xsi:type="smst:SMSMessageETO">
+    <!-- sequence of smst:content, smst:earliestDeliveryTime,
+           smst:expiryDate, smst:priority, smst:recipient,
+           smst:senderAddress, smst:contentSentEncoding, smst:flash,
+           smst:originatingPort, smst:destinationPort, smst:pid, smst:dcs -->
+    <smst:content xsi:type="xs:string">example</smst:content>
+    <smst:earliestDeliveryTime xsi:type="xs:dateTime">
       <!-- is nillable -->
       2006-10-06T00:23:02Z
-    </smse:earliestDeliveryTime>
-    <smse:expiryDate xsi:type="xs:dateTime">
+    </smst:earliestDeliveryTime>
+    <smst:expiryDate xsi:type="xs:dateTime">
       <!-- is nillable -->
       2006-10-06T00:23:02Z
-    </smse:expiryDate>
-    <smse:priority xsi:type="xs:string">
+    </smst:expiryDate>
+    <smst:priority xsi:type="xs:string">
       <!-- is nillable -->
       example
-    </smse:priority>
-    <smse:recipient xsi:type="xs:string">example</smse:recipient>
-    <smse:senderAddress xsi:type="xs:string">
+    </smst:priority>
+    <smst:recipient xsi:type="xs:string">example</smst:recipient>
+    <smst:senderAddress xsi:type="xs:string">
       <!-- is nillable -->
       example
-    </smse:senderAddress>
-    <smse:contentSentEncoding xsi:type="xs:string">
+    </smst:senderAddress>
+    <smst:contentSentEncoding xsi:type="xs:string">
       <!-- is nillable -->
       example
-    </smse:contentSentEncoding>
-    <smse:flash xsi:type="xs:boolean">
+    </smst:contentSentEncoding>
+    <smst:flash xsi:type="xs:boolean">
       <!-- is nillable -->
       true
-    </smse:flash>
-    <smse:originatingPort xsi:type="xs:int">
+    </smst:flash>
+    <smst:originatingPort xsi:type="xs:int">
       <!-- is nillable -->
       42
-    </smse:originatingPort>
-    <smse:destinationPort xsi:type="xs:int">
+    </smst:originatingPort>
+    <smst:destinationPort xsi:type="xs:int">
       <!-- is nillable -->
       42
-    </smse:destinationPort>
-    <smse:pid xsi:type="xs:int">
+    </smst:destinationPort>
+    <smst:pid xsi:type="xs:int">
       <!-- is nillable -->
       42
-    </smse:pid>
-    <smse:dcs xsi:type="xs:int">
+    </smst:pid>
+    <smst:dcs xsi:type="xs:int">
       <!-- is nillable -->
       42
-    </smse:dcs>
+    </smst:dcs>
   </smsi:sms>
 </smsi:sendSMS>
