@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:tns2="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0"    
+    xmlns:smse="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0"
     elementFormDefault="qualified"
     targetNamespace="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0">
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:impl="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI"
-    xmlns:tns2="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0"
-    xmlns:tns4="http://com.osa.mdsp.enabler.ecf"
+    xmlns:smsi="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI"
+    xmlns:smse="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0"
+    xmlns:enae="http://com.osa.mdsp.enabler.ecf"
     elementFormDefault="qualified"
     targetNamespace="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI">
 
@@ -15,8 +15,8 @@
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="tns4:InvocationContext" />
-                <xsd:element name="sms" type="tns2:SMSMessageETO" />
+                    type="enae:InvocationContext" />
+                <xsd:element name="sms" type="smse:SMSMessageETO" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -32,8 +32,8 @@
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="tns4:InvocationContext" />
-                <xsd:element name="sms" type="tns2:SMSMessageETO" />
+                    type="enae:InvocationContext" />
+                <xsd:element name="sms" type="smse:SMSMessageETO" />
                 <xsd:element name="notificationURL" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
@@ -50,8 +50,8 @@
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="tns4:InvocationContext" />
-                <xsd:element name="sms" type="tns2:SMSMessageETO" />
+                    type="enae:InvocationContext" />
+                <xsd:element name="sms" type="smse:SMSMessageETO" />
                 <xsd:element name="serviceId" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
@@ -68,8 +68,8 @@
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="tns4:InvocationContext" />
-                <xsd:element name="sms" type="tns2:SMSMessageETO" />
+                    type="enae:InvocationContext" />
+                <xsd:element name="sms" type="smse:SMSMessageETO" />
                 <xsd:element name="serviceId" type="xsd:string" />
                 <xsd:element name="notificationURL" type="xsd:string" />
             </xsd:sequence>
@@ -87,8 +87,8 @@
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="tns4:InvocationContext" />
-                <xsd:element name="sms" type="tns2:SMSBinaryMessageETO" />
+                    type="enae:InvocationContext" />
+                <xsd:element name="sms" type="smse:SMSBinaryMessageETO" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -104,8 +104,8 @@
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="tns4:InvocationContext" />
-                <xsd:element name="sms" type="tns2:SMSBinaryMessageETO" />
+                    type="enae:InvocationContext" />
+                <xsd:element name="sms" type="smse:SMSBinaryMessageETO" />
                 <xsd:element name="notificationURL" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
@@ -122,8 +122,8 @@
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="tns4:InvocationContext" />
-                <xsd:element name="sms" type="tns2:SMSBinaryMessageETO" />
+                    type="enae:InvocationContext" />
+                <xsd:element name="sms" type="smse:SMSBinaryMessageETO" />
                 <xsd:element name="serviceId" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
@@ -140,8 +140,8 @@
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="tns4:InvocationContext" />
-                <xsd:element name="sms" type="tns2:SMSBinaryMessageETO" />
+                    type="enae:InvocationContext" />
+                <xsd:element name="sms" type="smse:SMSBinaryMessageETO" />
                 <xsd:element name="serviceId" type="xsd:string" />
                 <xsd:element name="notificationURL" type="xsd:string" />
             </xsd:sequence>
