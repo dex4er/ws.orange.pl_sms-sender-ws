@@ -345,6 +345,7 @@
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendSMSToAlias">
+            <wsdl:documentation>Sending SMS to alias is not supported</wsdl:documentation>
             <wsdl:input message="smsi:sendSMSToAliasRequest" name="sendSMSToAliasRequest" />
             <wsdl:output message="smsi:sendSMSToAliasResponse"
                 name="sendSMSToAliasResponse" />
@@ -352,6 +353,7 @@
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendSMSWithNotificationToAlias">
+            <wsdl:documentation>Sending SMS with notification to alias is not supported</wsdl:documentation>
             <wsdl:input message="smsi:sendSMSWithNotificationToAliasRequest"
                 name="sendSMSWithNotificationToAliasRequest" />
             <wsdl:output message="smsi:sendSMSWithNotificationToAliasResponse"
@@ -375,6 +377,7 @@
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendBinarySMSToAlias">
+            <wsdl:documentation>Sending binary SMS to alias is not supported</wsdl:documentation>
             <wsdl:input message="smsi:sendBinarySMSToAliasRequest"
                 name="sendBinarySMSToAliasRequest" />
             <wsdl:output message="smsi:sendBinarySMSToAliasResponse"
@@ -383,6 +386,7 @@
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendBinarySMSWithNotificationToAlias">
+            <wsdl:documentation>Sending SMS with notification to alias is not supported</wsdl:documentation>
             <wsdl:input message="smsi:sendBinarySMSWithNotificationToAliasRequest"
                 name="sendBinarySMSWithNotificationToAliasRequest" />
             <wsdl:output message="smsi:sendBinarySMSWithNotificationToAliasResponse"
