@@ -35,7 +35,7 @@
             <xsd:element name="hasUdh" minOccurs="0" nillable="true"
                 default="true" type="xsd:boolean" />
             <xsd:element maxOccurs="unbounded" name="content"
-                type="xsd:string" />
+                type="xsd:hexBinary" />
             <xsd:element name="earliestDeliveryTime" minOccurs="0"
                 nillable="true" type="xsd:dateTime" />
             <xsd:element name="expiryDate" minOccurs="0" nillable="true"
