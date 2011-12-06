@@ -7,6 +7,12 @@
     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI">
+    <wsdl:documentation>
+        Webservice for sending SMS at PTK Centertel
+
+        Date: 2011-12-06
+        Version: 2.0
+    </wsdl:documentation>
 
     <wsdl:types>
         <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified">
