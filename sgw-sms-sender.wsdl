@@ -6,7 +6,9 @@
     xmlns:enae="http://com.osa.mdsp.enabler.ecf"
     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI">
+    targetNamespace="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI"
+    name="sgw-sms-sender">
+
     <wsdl:documentation>
         Webservice for sending SMS at PTK Centertel
 
