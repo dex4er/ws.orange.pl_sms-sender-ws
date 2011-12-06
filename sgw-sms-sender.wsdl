@@ -9,26 +9,19 @@
     targetNamespace="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI">
 
     <wsdl:types>
-        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            elementFormDefault="unqualified">
-            <xsd:import namespace="http://com.osa.mdsp.enabler.ecf"
-                schemaLocation="com.osa.mdsp.enabler.ecf.xsd" />
-            <xsd:import namespace="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0"
-                schemaLocation="com.osa.mdsp.enabler.sei.eto_SMSEnabler_V2_0.xsd" />
-            <xsd:import namespace="http://com.osa.mdsp.enabler.sei.exception/SMSEnabler/V2_0"
-                schemaLocation="com.osa.mdsp.enabler.sei.exception_SMSEnabler_V2_0.xsd" />
-            <xsd:import namespace="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI"
-                schemaLocation="com.osa.mdsp.enabler.sei_SMSEnabler_V2_0_SMSSenderSEI.xsd" />
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified">
+            <xsd:import namespace="http://com.osa.mdsp.enabler.ecf" schemaLocation="com.osa.mdsp.enabler.ecf.xsd" />
+            <xsd:import namespace="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0" schemaLocation="com.osa.mdsp.enabler.sei.eto_SMSEnabler_V2_0.xsd" />
+            <xsd:import namespace="http://com.osa.mdsp.enabler.sei.exception/SMSEnabler/V2_0" schemaLocation="com.osa.mdsp.enabler.sei.exception_SMSEnabler_V2_0.xsd" />
+            <xsd:import namespace="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI" schemaLocation="com.osa.mdsp.enabler.sei_SMSEnabler_V2_0_SMSSenderSEI.xsd" />
         </xsd:schema>
     </wsdl:types>
 
     <wsdl:message name="sendBinarySMSWithNotificationToAliasResponse">
-        <wsdl:part element="smsi:sendBinarySMSWithNotificationToAliasResponse"
-            name="sendBinarySMSWithNotificationToAliasResponse" />
+        <wsdl:part element="smsi:sendBinarySMSWithNotificationToAliasResponse" name="sendBinarySMSWithNotificationToAliasResponse" />
     </wsdl:message>
     <wsdl:message name="sendSMSWithNotificationResponse">
-        <wsdl:part element="smsi:sendSMSWithNotificationResponse"
-            name="sendSMSWithNotificationResponse" />
+        <wsdl:part element="smsi:sendSMSWithNotificationResponse" name="sendSMSWithNotificationResponse" />
     </wsdl:message>
     <wsdl:message name="sendSMSToAliasRequest">
         <wsdl:part element="smsi:sendSMSToAlias" name="sendSMSToAliasRequest" />
@@ -40,12 +33,10 @@
         <wsdl:part element="enae:EnablerException" name="EnablerException" />
     </wsdl:message>
     <wsdl:message name="sendBinarySMSWithNotificationRequest">
-        <wsdl:part element="smsi:sendBinarySMSWithNotification"
-            name="sendBinarySMSWithNotificationRequest" />
+        <wsdl:part element="smsi:sendBinarySMSWithNotification" name="sendBinarySMSWithNotificationRequest" />
     </wsdl:message>
     <wsdl:message name="sendBinarySMSWithNotificationResponse">
-        <wsdl:part element="smsi:sendBinarySMSWithNotificationResponse"
-            name="sendBinarySMSWithNotificationResponse" />
+        <wsdl:part element="smsi:sendBinarySMSWithNotificationResponse" name="sendBinarySMSWithNotificationResponse" />
     </wsdl:message>
     <wsdl:message name="sendSMSToAliasResponse">
         <wsdl:part element="smsi:sendSMSToAliasResponse" name="sendSMSToAliasResponse" />
@@ -60,12 +51,10 @@
         <wsdl:part element="smsi:sendSMS" name="sendSMSRequest" />
     </wsdl:message>
     <wsdl:message name="sendSMSWithNotificationToAliasResponse">
-        <wsdl:part element="smsi:sendSMSWithNotificationToAliasResponse"
-            name="sendSMSWithNotificationToAliasResponse" />
+        <wsdl:part element="smsi:sendSMSWithNotificationToAliasResponse" name="sendSMSWithNotificationToAliasResponse" />
     </wsdl:message>
     <wsdl:message name="sendSMSWithNotificationToAliasRequest">
-        <wsdl:part element="smsi:sendSMSWithNotificationToAlias"
-            name="sendSMSWithNotificationToAliasRequest" />
+        <wsdl:part element="smsi:sendSMSWithNotificationToAlias" name="sendSMSWithNotificationToAliasRequest" />
     </wsdl:message>
     <wsdl:message name="sendBinarySMSToAliasResponse">
         <wsdl:part element="smsi:sendBinarySMSToAliasResponse" name="sendBinarySMSToAliasResponse" />
@@ -74,8 +63,7 @@
         <wsdl:part element="smsi:sendBinarySMS" name="sendBinarySMSRequest" />
     </wsdl:message>
     <wsdl:message name="sendBinarySMSWithNotificationToAliasRequest">
-        <wsdl:part element="smsi:sendBinarySMSWithNotificationToAlias"
-            name="sendBinarySMSWithNotificationToAliasRequest" />
+        <wsdl:part element="smsi:sendBinarySMSWithNotificationToAlias" name="sendBinarySMSWithNotificationToAliasRequest" />
     </wsdl:message>
     <wsdl:message name="sendSMSResponse">
         <wsdl:part element="smsi:sendSMSResponse" name="sendSMSResponse" />
@@ -92,69 +80,55 @@
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendSMSWithNotification">
-            <wsdl:input message="smsi:sendSMSWithNotificationRequest"
-                name="sendSMSWithNotificationRequest" />
-            <wsdl:output message="smsi:sendSMSWithNotificationResponse"
-                name="sendSMSWithNotificationResponse" />
+            <wsdl:input message="smsi:sendSMSWithNotificationRequest" name="sendSMSWithNotificationRequest" />
+            <wsdl:output message="smsi:sendSMSWithNotificationResponse" name="sendSMSWithNotificationResponse" />
             <wsdl:fault message="smsi:SMSException" name="SMSException" />
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendSMSToAlias">
             <wsdl:documentation>Sending SMS to alias is not supported</wsdl:documentation>
             <wsdl:input message="smsi:sendSMSToAliasRequest" name="sendSMSToAliasRequest" />
-            <wsdl:output message="smsi:sendSMSToAliasResponse"
-                name="sendSMSToAliasResponse" />
+            <wsdl:output message="smsi:sendSMSToAliasResponse" name="sendSMSToAliasResponse" />
             <wsdl:fault message="smsi:SMSException" name="SMSException" />
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendSMSWithNotificationToAlias">
             <wsdl:documentation>Sending SMS with notification to alias is not supported</wsdl:documentation>
-            <wsdl:input message="smsi:sendSMSWithNotificationToAliasRequest"
-                name="sendSMSWithNotificationToAliasRequest" />
-            <wsdl:output message="smsi:sendSMSWithNotificationToAliasResponse"
-                name="sendSMSWithNotificationToAliasResponse" />
+            <wsdl:input message="smsi:sendSMSWithNotificationToAliasRequest" name="sendSMSWithNotificationToAliasRequest" />
+            <wsdl:output message="smsi:sendSMSWithNotificationToAliasResponse" name="sendSMSWithNotificationToAliasResponse" />
             <wsdl:fault message="smsi:SMSException" name="SMSException" />
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendBinarySMS">
             <wsdl:input message="smsi:sendBinarySMSRequest" name="sendBinarySMSRequest" />
-            <wsdl:output message="smsi:sendBinarySMSResponse"
-                name="sendBinarySMSResponse" />
+            <wsdl:output message="smsi:sendBinarySMSResponse" name="sendBinarySMSResponse" />
             <wsdl:fault message="smsi:SMSException" name="SMSException" />
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendBinarySMSWithNotification">
-            <wsdl:input message="smsi:sendBinarySMSWithNotificationRequest"
-                name="sendBinarySMSWithNotificationRequest" />
-            <wsdl:output message="smsi:sendBinarySMSWithNotificationResponse"
-                name="sendBinarySMSWithNotificationResponse" />
+            <wsdl:input message="smsi:sendBinarySMSWithNotificationRequest" name="sendBinarySMSWithNotificationRequest" />
+            <wsdl:output message="smsi:sendBinarySMSWithNotificationResponse" name="sendBinarySMSWithNotificationResponse" />
             <wsdl:fault message="smsi:SMSException" name="SMSException" />
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendBinarySMSToAlias">
             <wsdl:documentation>Sending binary SMS to alias is not supported</wsdl:documentation>
-            <wsdl:input message="smsi:sendBinarySMSToAliasRequest"
-                name="sendBinarySMSToAliasRequest" />
-            <wsdl:output message="smsi:sendBinarySMSToAliasResponse"
-                name="sendBinarySMSToAliasResponse" />
+            <wsdl:input message="smsi:sendBinarySMSToAliasRequest" name="sendBinarySMSToAliasRequest" />
+            <wsdl:output message="smsi:sendBinarySMSToAliasResponse" name="sendBinarySMSToAliasResponse" />
             <wsdl:fault message="smsi:SMSException" name="SMSException" />
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendBinarySMSWithNotificationToAlias">
             <wsdl:documentation>Sending SMS with notification to alias is not supported</wsdl:documentation>
-            <wsdl:input message="smsi:sendBinarySMSWithNotificationToAliasRequest"
-                name="sendBinarySMSWithNotificationToAliasRequest" />
-            <wsdl:output message="smsi:sendBinarySMSWithNotificationToAliasResponse"
-                name="sendBinarySMSWithNotificationToAliasResponse" />
+            <wsdl:input message="smsi:sendBinarySMSWithNotificationToAliasRequest" name="sendBinarySMSWithNotificationToAliasRequest" />
+            <wsdl:output message="smsi:sendBinarySMSWithNotificationToAliasResponse" name="sendBinarySMSWithNotificationToAliasResponse" />
             <wsdl:fault message="smsi:SMSException" name="SMSException" />
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
     </wsdl:portType>
 
-    <wsdl:binding name="SMSSenderEnablerRemoteSoapBinding_V2_0"
-        type="smsi:SMSSenderEnablerRemote_V2_0">
-        <soap:binding style="document"
-            transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:binding name="SMSSenderEnablerRemoteSoapBinding_V2_0" type="smsi:SMSSenderEnablerRemote_V2_0">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
         <wsdl:operation name="sendSMS">
             <soap:operation soapAction="sendSMS" style="document" />
             <wsdl:input name="sendSMSRequest">
@@ -278,8 +252,7 @@
     </wsdl:binding>
 
     <wsdl:service name="SMSSenderEnablerRemoteService_V2_0">
-        <wsdl:port binding="smsi:SMSSenderEnablerRemoteSoapBinding_V2_0"
-            name="SMSSenderEnablerRemote_V2_0">
+        <wsdl:port binding="smsi:SMSSenderEnablerRemoteSoapBinding_V2_0" name="SMSSenderEnablerRemote_V2_0">
             <soap:address location="http://sgw-sc:8380/security-backend/services/smsEnabler" />
         </wsdl:port>
     </wsdl:service>

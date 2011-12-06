@@ -4,155 +4,154 @@
     xmlns:smst="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0"
     xmlns:enae="http://com.osa.mdsp.enabler.ecf"
     elementFormDefault="qualified"
-    targetNamespace="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI">
+    targetNamespace="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI"
+    version="2.0">
 
-    <xsd:import namespace="http://com.osa.mdsp.enabler.ecf"
-        schemaLocation="com.osa.mdsp.enabler.ecf.xsd" />
-    <xsd:import namespace="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0"
-        schemaLocation="com.osa.mdsp.enabler.sei.eto_SMSEnabler_V2_0.xsd" />
+    <xsd:import namespace="http://com.osa.mdsp.enabler.ecf" schemaLocation="com.osa.mdsp.enabler.ecf.xsd" />
+    <xsd:import namespace="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0" schemaLocation="com.osa.mdsp.enabler.sei.eto_SMSEnabler_V2_0.xsd" />
 
     <xsd:element name="sendSMS">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="enae:InvocationContext" />
+                <xsd:element name="ctx" minOccurs="0" nillable="true" type="enae:InvocationContext" />
                 <xsd:element name="sms" type="smst:SMSMessageETO" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendSMSResponse">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="sendSMSReturn" nillable="true"
-                    type="xsd:string" />
+                <xsd:element name="sendSMSReturn" nillable="true" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendSMSWithNotification">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="enae:InvocationContext" />
+                <xsd:element name="ctx" minOccurs="0" nillable="true" type="enae:InvocationContext" />
                 <xsd:element name="sms" type="smst:SMSMessageETO" />
                 <xsd:element name="notificationURL" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendSMSWithNotificationResponse">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="sendSMSWithNotificationReturn"
-                    nillable="true" type="xsd:string" />
+                <xsd:element name="sendSMSWithNotificationReturn" nillable="true" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendSMSToAlias">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="enae:InvocationContext" />
+                <xsd:element name="ctx" minOccurs="0" nillable="true" type="enae:InvocationContext" />
                 <xsd:element name="sms" type="smst:SMSMessageETO" />
                 <xsd:element name="serviceId" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendSMSToAliasResponse">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="sendSMSToAliasReturn" nillable="true"
-                    type="xsd:string" />
+                <xsd:element name="sendSMSToAliasReturn" nillable="true" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendSMSWithNotificationToAlias">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="enae:InvocationContext" />
+                <xsd:element name="ctx" minOccurs="0" nillable="true" type="enae:InvocationContext" />
                 <xsd:element name="sms" type="smst:SMSMessageETO" />
                 <xsd:element name="serviceId" type="xsd:string" />
                 <xsd:element name="notificationURL" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendSMSWithNotificationToAliasResponse">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="sendSMSWithNotificationToAliasReturn"
-                    nillable="true" type="xsd:string" />
+                <xsd:element name="sendSMSWithNotificationToAliasReturn" nillable="true" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendBinarySMS">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="enae:InvocationContext" />
+                <xsd:element name="ctx" minOccurs="0" nillable="true" type="enae:InvocationContext" />
                 <xsd:element name="sms" type="smst:SMSBinaryMessageETO" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendBinarySMSResponse">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="sendBinarySMSReturn" nillable="true"
-                    type="xsd:string" />
+                <xsd:element name="sendBinarySMSReturn" nillable="true" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendBinarySMSWithNotification">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="enae:InvocationContext" />
+                <xsd:element name="ctx" minOccurs="0" nillable="true" type="enae:InvocationContext" />
                 <xsd:element name="sms" type="smst:SMSBinaryMessageETO" />
                 <xsd:element name="notificationURL" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendBinarySMSWithNotificationResponse">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="sendBinarySMSWithNotificationReturn"
-                    nillable="true" type="xsd:string" />
+                <xsd:element name="sendBinarySMSWithNotificationReturn" nillable="true" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendBinarySMSToAlias">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="enae:InvocationContext" />
+                <xsd:element name="ctx" minOccurs="0" nillable="true" type="enae:InvocationContext" />
                 <xsd:element name="sms" type="smst:SMSBinaryMessageETO" />
                 <xsd:element name="serviceId" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendBinarySMSToAliasResponse">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="sendBinarySMSToAliasReturn"
-                    nillable="true" type="xsd:string" />
+                <xsd:element name="sendBinarySMSToAliasReturn" nillable="true" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendBinarySMSWithNotificationToAlias">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="ctx" minOccurs="0" nillable="true"
-                    type="enae:InvocationContext" />
+                <xsd:element name="ctx" minOccurs="0" nillable="true" type="enae:InvocationContext" />
                 <xsd:element name="sms" type="smst:SMSBinaryMessageETO" />
                 <xsd:element name="serviceId" type="xsd:string" />
                 <xsd:element name="notificationURL" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendBinarySMSWithNotificationToAliasResponse">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="sendBinarySMSWithNotificationToAliasReturn"
-                    nillable="true" type="xsd:string" />
+                <xsd:element name="sendBinarySMSWithNotificationToAliasReturn" nillable="true" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
 </xsd:schema>

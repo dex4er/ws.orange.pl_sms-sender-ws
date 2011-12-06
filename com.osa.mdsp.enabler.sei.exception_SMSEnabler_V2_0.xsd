@@ -2,7 +2,8 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:smse="http://com.osa.mdsp.enabler.sei.exception/SMSEnabler/V2_0"
     elementFormDefault="qualified"
-    targetNamespace="http://com.osa.mdsp.enabler.sei.exception/SMSEnabler/V2_0">
+    targetNamespace="http://com.osa.mdsp.enabler.sei.exception/SMSEnabler/V2_0"
+    version="2.0">
 
     <xsd:complexType name="SMSException">
         <xsd:sequence>
@@ -10,5 +11,7 @@
             <xsd:element name="message" nillable="true" type="xsd:string" />
         </xsd:sequence>
     </xsd:complexType>
+
     <xsd:element name="SMSException" nillable="true" type="smse:SMSException" />
+
 </xsd:schema>

@@ -2,12 +2,12 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:enae="http://com.osa.mdsp.enabler.ecf"
     elementFormDefault="qualified"
-    targetNamespace="http://com.osa.mdsp.enabler.ecf">
+    targetNamespace="http://com.osa.mdsp.enabler.ecf"
+    version="2.0">
 
     <xsd:complexType name="InvocationContext">
         <xsd:sequence>
-            <xsd:element minOccurs="0" maxOccurs="unbounded" name="properties"
-                nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="properties" nillable="true" type="xsd:string" />
         </xsd:sequence>
     </xsd:complexType>
 
@@ -18,7 +18,6 @@
         </xsd:sequence>
     </xsd:complexType>
 
-    <xsd:element name="EnablerException" nillable="true"
-        type="enae:EnablerException" />
+    <xsd:element name="EnablerException" nillable="true" type="enae:EnablerException" />
 
 </xsd:schema>
