@@ -5,6 +5,11 @@ if [ $# -lt 2 ]; then
     exit 1
 fi
 
+if ! command -v xml2wbxml >/dev/null; then
+    xml2wbxml
+    exit 1
+fi
+
 url=$1
 description=$2
 
