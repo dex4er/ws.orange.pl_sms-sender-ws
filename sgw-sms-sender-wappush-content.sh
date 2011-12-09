@@ -24,7 +24,7 @@ ira_wbxml=$(echo "$xml" | xml2wbxml - -o - 2>/dev/null | perl -e 'local $/; $_=<
 head_pdu="000601AE"
 
 pdu="$head_pdu$ira_wbxml"
-udh=$(printf "%s%s" 01070605040B8423F0 0201F5)
+udh="0605040B8423F0"
 
 pdul=$(( $(echo -n "$pdu" | wc -c) / 2 ))
 udhl=$(( $(echo -n "$udh" | wc -c) / 2 ))
