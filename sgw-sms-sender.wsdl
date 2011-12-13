@@ -88,46 +88,49 @@
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendSMSWithNotification">
+            <wsdl:documentation>This operation sends an SMS to a user identified by his MSISDN through the xMS Hub. This call may imply several notifications</wsdl:documentation>
             <wsdl:input message="smsi:sendSMSWithNotificationRequest" name="sendSMSWithNotificationRequest" />
             <wsdl:output message="smsi:sendSMSWithNotificationResponse" name="sendSMSWithNotificationResponse" />
             <wsdl:fault message="smsi:SMSException" name="SMSException" />
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendSMSToAlias">
-            <wsdl:documentation>Sending SMS to alias is not supported</wsdl:documentation>
+            <wsdl:documentation>This operation is currently not supported and is reserved for future use.</wsdl:documentation>
             <wsdl:input message="smsi:sendSMSToAliasRequest" name="sendSMSToAliasRequest" />
             <wsdl:output message="smsi:sendSMSToAliasResponse" name="sendSMSToAliasResponse" />
             <wsdl:fault message="smsi:SMSException" name="SMSException" />
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendSMSWithNotificationToAlias">
-            <wsdl:documentation>Sending SMS with notification to alias is not supported</wsdl:documentation>
+            <wsdl:documentation>This operation is currently not supported and is reserved for future use.</wsdl:documentation>
             <wsdl:input message="smsi:sendSMSWithNotificationToAliasRequest" name="sendSMSWithNotificationToAliasRequest" />
             <wsdl:output message="smsi:sendSMSWithNotificationToAliasResponse" name="sendSMSWithNotificationToAliasResponse" />
             <wsdl:fault message="smsi:SMSException" name="SMSException" />
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendBinarySMS">
+            <wsdl:documentation>This operation sends a binary SMS to a user identified by his MSISDN through the xMS Hub. This call implies no notifications.</wsdl:documentation>
             <wsdl:input message="smsi:sendBinarySMSRequest" name="sendBinarySMSRequest" />
             <wsdl:output message="smsi:sendBinarySMSResponse" name="sendBinarySMSResponse" />
             <wsdl:fault message="smsi:SMSException" name="SMSException" />
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendBinarySMSWithNotification">
+            <wsdl:documentation>This operation sends an SMS to a user identified by his MSISDN through the xMS Hub. This call may imply several notifications</wsdl:documentation>
             <wsdl:input message="smsi:sendBinarySMSWithNotificationRequest" name="sendBinarySMSWithNotificationRequest" />
             <wsdl:output message="smsi:sendBinarySMSWithNotificationResponse" name="sendBinarySMSWithNotificationResponse" />
             <wsdl:fault message="smsi:SMSException" name="SMSException" />
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendBinarySMSToAlias">
-            <wsdl:documentation>Sending binary SMS to alias is not supported</wsdl:documentation>
+            <wsdl:documentation>This operation is currently not supported and is reserved for future use.</wsdl:documentation>
             <wsdl:input message="smsi:sendBinarySMSToAliasRequest" name="sendBinarySMSToAliasRequest" />
             <wsdl:output message="smsi:sendBinarySMSToAliasResponse" name="sendBinarySMSToAliasResponse" />
             <wsdl:fault message="smsi:SMSException" name="SMSException" />
             <wsdl:fault message="smsi:EnablerException" name="EnablerException" />
         </wsdl:operation>
         <wsdl:operation name="sendBinarySMSWithNotificationToAlias">
-            <wsdl:documentation>Sending SMS with notification to alias is not supported</wsdl:documentation>
+            <wsdl:documentation>This operation is currently not supported and is reserved for future use.</wsdl:documentation>
             <wsdl:input message="smsi:sendBinarySMSWithNotificationToAliasRequest" name="sendBinarySMSWithNotificationToAliasRequest" />
             <wsdl:output message="smsi:sendBinarySMSWithNotificationToAliasResponse" name="sendBinarySMSWithNotificationToAliasResponse" />
             <wsdl:fault message="smsi:SMSException" name="SMSException" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:smst="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0"
     elementFormDefault="qualified"
     targetNamespace="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0"
@@ -7,34 +7,243 @@
 
     <xsd:complexType name="SMSMessageETO">
         <xsd:sequence>
-            <xsd:element name="content" type="xsd:string" />
-            <xsd:element name="earliestDeliveryTime" minOccurs="0" nillable="true" type="xsd:dateTime" />
-            <xsd:element name="expiryDate" minOccurs="0" nillable="true" type="xsd:dateTime" />
-            <xsd:element name="priority" minOccurs="0" nillable="true" type="xsd:string" />
-            <xsd:element name="recipient" type="xsd:string" />
-            <xsd:element name="senderAddress" minOccurs="0" nillable="true" type="xsd:string" />
-            <xsd:element name="contentSentEncoding" minOccurs="0" nillable="true" type="xsd:string" />
-            <xsd:element name="flash" minOccurs="0" nillable="true" type="xsd:boolean" />
-            <xsd:element name="originatingPort" minOccurs="0" nillable="true" type="xsd:int" />
-            <xsd:element name="destinationPort" minOccurs="0" nillable="true" type="xsd:int" />
-            <xsd:element name="pid" minOccurs="0" nillable="true" type="xsd:int" />
-            <xsd:element name="dcs" minOccurs="0" nillable="true" type="xsd:int" />
+            <xsd:element name="content" type="smst:SMSContent">
+                <xsd:annotation>
+                    <xsd:documentation>SMS content as UTF-8 string</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="earliestDeliveryTime" minOccurs="0" nillable="true" type="xsd:dateTime">
+                <xsd:annotation>
+                    <xsd:documentation>Deferred delivery time</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="expiryDate" minOccurs="0" nillable="true" type="xsd:dateTime">
+                <xsd:annotation>
+                    <xsd:documentation>Validity period (maximal 3 days)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="priority" minOccurs="0" nillable="true" type="smst:SMSPriority">
+                <xsd:annotation>
+                    <xsd:documentation>Urgency indicator</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="recipient" type="smst:MSISDN">
+                <xsd:annotation>
+                    <xsd:documentation>MSISDN number</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="senderAddress" minOccurs="0" nillable="true" type="smst:SMSSender">
+                <xsd:annotation>
+                    <xsd:documentation>Sender address (default: LA)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="contentSentEncoding" minOccurs="0" nillable="true" type="smst:SMSEncoding">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        SMS encoding: GSM7BITS, UCS2. Default: depends
+                        on content value. If content contains characters outside GSM 03.38
+                        alphabet, SMS is coded as UCS-LE.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="flash" minOccurs="0" nillable="true" type="xsd:boolean">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        Value "true" means message class 0. Default
+                        value or "false" means message class 1.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="originatingPort" minOccurs="0" nillable="true" type="smst:SMSPort">
+                <xsd:annotation>
+                    <xsd:documentation>Unsupported</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="destinationPort" minOccurs="0" nillable="true" type="smst:SMSPort">
+                <xsd:annotation>
+                    <xsd:documentation>Unsupported</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="pid" minOccurs="0" nillable="true" type="smst:SMSPID">
+                <xsd:annotation>
+                    <xsd:documentation>TP-PID value (TP-Protocol Identifier) in
+                        decimal format.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="dcs" minOccurs="0" nillable="true" type="smst:SMSDCS">
+                <xsd:annotation>
+                    <xsd:documentation>GSM DCS Information (0 .. 255, default: unset)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
 
     <xsd:complexType name="SMSBinaryMessageETO">
         <xsd:sequence>
-            <xsd:element name="hasUdh" minOccurs="0" nillable="true" default="true" type="xsd:boolean" />
-            <xsd:element name="content" maxOccurs="unbounded" type="xsd:hexBinary" />
-            <xsd:element name="earliestDeliveryTime" minOccurs="0" nillable="true" type="xsd:dateTime" />
-            <xsd:element name="expiryDate" minOccurs="0" nillable="true" type="xsd:dateTime" />
-            <xsd:element name="priority" minOccurs="0" nillable="true" type="xsd:string" />
-            <xsd:element name="recipient" type="xsd:string" />
-            <xsd:element name="senderAddress" minOccurs="0" nillable="true" type="xsd:string" />
-            <xsd:element name="dcs" minOccurs="0" nillable="true" type="xsd:int" />
-            <xsd:element name="msgidmo" minOccurs="0" nillable="true" type="xsd:string" />
-            <xsd:element name="pid" minOccurs="0" nillable="true" type="xsd:int" />
+            <xsd:element name="hasUdh" minOccurs="0" nillable="true" default="true" type="xsd:boolean">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        True means that all TP-UD (content element)
+                        contain an UDH (User Data Header).
+                        False means that none TP-UD contain an UDH.
+                        The default value is ‘True’.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="content" maxOccurs="unbounded" type="xsd:hexBinary">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        TP-UD (Transfer Protocol User Data) that
+                        composes the message. It can contain TP-UDH
+                        if hasUdh is 'True'. Then first byte is length of UD and UDH
+                        with additional byte for length of UDH; second byte is length
+                        of UDH; next bytes are UDH; last bytes are UD.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="earliestDeliveryTime" minOccurs="0" nillable="true" type="xsd:dateTime">
+                <xsd:annotation>
+                    <xsd:documentation>Deferred delivery time</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="expiryDate" minOccurs="0" nillable="true" type="xsd:dateTime">
+                <xsd:annotation>
+                    <xsd:documentation>Validity period (maximal 3 days)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="priority" minOccurs="0" nillable="true" type="smst:SMSPriority">
+                <xsd:annotation>
+                    <xsd:documentation>Urgency indicator</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="recipient" type="smst:MSISDN">
+                <xsd:annotation>
+                    <xsd:documentation>MSISDN number</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="senderAddress" minOccurs="0" nillable="true" type="smst:SMSSender">
+                <xsd:annotation>
+                    <xsd:documentation>Sender address (default: LA)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="dcs" minOccurs="0" nillable="true" type="smst:SMSDCS">
+                <xsd:annotation>
+                    <xsd:documentation>GSM DCS Information (0 .. 255, default: unset)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="msgidmo" minOccurs="0" nillable="true" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Unsupported</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="pid" minOccurs="0" nillable="true" type="smst:SMSPID">
+                <xsd:annotation>
+                    <xsd:documentation>TP-PID value (TP-Protocol Identifier) in
+                        decimal format.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
 
+    <xsd:simpleType name="MSISDN">
+        <xsd:annotation>
+            <xsd:documentation>
+                MSISDN number without country prefix or with 00
+                and country prefix
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="9" />
+            <xsd:maxLength value="30" />
+            <xsd:whiteSpace value="collapse" />
+            <xsd:pattern value="(00\d{11,28})|\d{9}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="SMSContent">
+        <xsd:annotation>
+            <xsd:documentation>UTF-8 string</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="1" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="SMSPriority">
+        <xsd:annotation>
+                <xsd:documentation>Urgency indicator: Low, Normal (default), High</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+                <xsd:length value="1"/>
+                <xsd:whiteSpace value="collapse" />
+                <xsd:enumeration value="L" />
+                <xsd:enumeration value="N" />
+                <xsd:enumeration value="H" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="SMSSender">
+        <xsd:annotation>
+                <xsd:documentation>
+                        Sender address (maximal 10 characters of GSM 03.38
+                        alphabet or 16 digits)
+                </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+                <xsd:minLength value="1"/>
+                <xsd:maxLength value="16"/>
+                <xsd:pattern value="\d{1,16}|.{1,10}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="SMSEncoding">
+        <xsd:annotation>
+                <xsd:documentation>
+                SMS encoding used for sending the message to the SMS Center:
+                GSM7BITS, UCS2</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="GSM7BITS" />
+                <xsd:enumeration value="UCS2" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="SMSDCS">
+        <xsd:annotation>
+                <xsd:documentation>GSM DCS Information</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:int">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="255" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="SMSPID">
+        <xsd:annotation>
+                <xsd:documentation>TP-PID as specified in the GSM 03.40 specification</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:int">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="255" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="SMSPort">
+        <xsd:annotation>
+                <xsd:documentation>Port number</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:int">
+                <xsd:minInclusive value="1" />
+                <xsd:maxInclusive value="65535" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="SMSBinaryContent">
+        <xsd:annotation>
+            <xsd:documentation>Binary content as TP-UD defined by GSM 03.40</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:hexBinary"/>
+    </xsd:simpleType>
 </xsd:schema>
