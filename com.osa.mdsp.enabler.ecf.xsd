@@ -6,10 +6,27 @@
     version="2.0">
 
     <xsd:complexType name="InvocationContext">
+        <xsd:annotation>
+            <xsd:documentation>Unused</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element minOccurs="0" maxOccurs="unbounded" name="properties" nillable="true" type="xsd:string" />
         </xsd:sequence>
     </xsd:complexType>
+
+    <xsd:simpleType name="NotificationURL">
+        <xsd:annotation>
+            <xsd:documentation>Unused</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:anyURI"></xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="ServiceId">
+        <xsd:annotation>
+            <xsd:documentation>Unused</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string"></xsd:restriction>
+    </xsd:simpleType>
 
     <xsd:complexType name="EnablerException">
         <xsd:sequence>

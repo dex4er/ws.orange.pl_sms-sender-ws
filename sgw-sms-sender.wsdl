@@ -82,6 +82,7 @@
 
     <wsdl:portType name="SMSSenderEnablerRemote_V2_0">
         <wsdl:operation name="sendSMS">
+            <wsdl:documentation>This operation sends an SMS to a user identified by his MSISDN through the xMS Hub.</wsdl:documentation>
             <wsdl:input message="smsi:sendSMSRequest" name="sendSMSRequest" />
             <wsdl:output message="smsi:sendSMSResponse" name="sendSMSResponse" />
             <wsdl:fault message="smsi:SMSException" name="SMSException" />
