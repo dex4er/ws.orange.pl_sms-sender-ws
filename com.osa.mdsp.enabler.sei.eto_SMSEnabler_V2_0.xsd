@@ -187,8 +187,8 @@
     <xsd:simpleType name="SMSSender">
         <xsd:annotation>
                 <xsd:documentation>
-                        Sender address (maximal 10 characters of GSM 03.38
-                        alphabet or 16 digits)
+                    Sender address (maximal 10 characters of GSM 03.38
+                    alphabet or 16 digits)
                 </xsd:documentation>
         </xsd:annotation>
         <xsd:restriction base="xsd:string">
@@ -201,8 +201,8 @@
     <xsd:simpleType name="SMSEncoding">
         <xsd:annotation>
                 <xsd:documentation>
-                SMS encoding used for sending the message to the SMS Center:
-                GSM7BITS, UCS2</xsd:documentation>
+                    SMS encoding used for sending the message to the SMS Center:
+                    GSM7BITS, UCS2</xsd:documentation>
         </xsd:annotation>
         <xsd:restriction base="xsd:string">
                 <xsd:enumeration value="GSM7BITS" />
