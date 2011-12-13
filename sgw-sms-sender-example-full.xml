@@ -1,4 +1,4 @@
-<smsi:sendSMS xmlns:enae="http://com.osa.mdsp.enabler.ecf" xmlns:smst="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0" xmlns:smsi="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="unnamed complex">
+<smsi:sendSMS xmlns:enae="http://com.osa.mdsp.enabler.ecf" xmlns:smst="http://com.osa.mdsp.enabler.sei.eto/SMSEnabler/V2_0" xmlns:smsi="http://com.osa.mdsp.enabler.sei/SMSEnabler/V2_0/SMSSenderSEI" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <!-- BE WARNED: in most cases, the example below cannot be used without
   interpretation. The comments will guide you.
   Produced by XML::Compile::Translate::Template version 1.23 on Thu Nov 24 14:34:29 2011
