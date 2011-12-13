@@ -32,7 +32,7 @@
             <xsd:sequence>
                 <xsd:element name="ctx" minOccurs="0" nillable="true" type="enae:InvocationContext" />
                 <xsd:element name="sms" type="smst:SMSMessageETO" />
-                <xsd:element name="notificationURL" type="xsd:string" />
+                <xsd:element name="notificationURL" type="xsd:anyURI" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -69,7 +69,7 @@
                 <xsd:element name="ctx" minOccurs="0" nillable="true" type="enae:InvocationContext" />
                 <xsd:element name="sms" type="smst:SMSMessageETO" />
                 <xsd:element name="serviceId" type="xsd:string" />
-                <xsd:element name="notificationURL" type="xsd:string" />
+                <xsd:element name="notificationURL" type="xsd:anyURI" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -104,7 +104,7 @@
             <xsd:sequence>
                 <xsd:element name="ctx" minOccurs="0" nillable="true" type="enae:InvocationContext" />
                 <xsd:element name="sms" type="smst:SMSBinaryMessageETO" />
-                <xsd:element name="notificationURL" type="xsd:string" />
+                <xsd:element name="notificationURL" type="xsd:anyURI" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -141,7 +141,7 @@
                 <xsd:element name="ctx" minOccurs="0" nillable="true" type="enae:InvocationContext" />
                 <xsd:element name="sms" type="smst:SMSBinaryMessageETO" />
                 <xsd:element name="serviceId" type="xsd:string" />
-                <xsd:element name="notificationURL" type="xsd:string" />
+                <xsd:element name="notificationURL" type="xsd:anyURI" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
