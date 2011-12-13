@@ -7,11 +7,54 @@
 
     <xsd:complexType name="SMSNotificationETO">
         <xsd:sequence>
-            <xsd:element name="nrLa" minOccurs="1" nillable="true" type="xsd:string" />
-            <xsd:element name="fromMsisdn" minOccurs="1" type="xsd:string" />
+            <xsd:element name="toLa" minOccurs="1" nillable="true" type="smnt:LaNumber" />
+            <xsd:element name="fromMsisdn" minOccurs="1" type="smnt:MSISDN" />
             <xsd:element name="transactionId" minOccurs="1" type="xsd:string" />
-            <xsd:element name="status" minOccurs="1" type="xsd:string" />
+            <xsd:element name="status" minOccurs="1" type="smnt:SMSStatus" />
         </xsd:sequence>
     </xsd:complexType>
+
+    <xsd:simpleType name="MSISDN">
+        <xsd:annotation>
+            <xsd:documentation>
+                MSISDN number without country prefix or with 00
+                and country prefix
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="9" />
+            <xsd:maxLength value="30" />
+            <xsd:whiteSpace value="collapse" />
+            <xsd:pattern value="(00\d{11,28})|\d{9}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="LaNumber">
+        <xsd:annotation>
+                <xsd:documentation>
+                    LA number of receiver (maximal 16 digits)
+                </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+                <xsd:minLength value="1"/>
+                <xsd:maxLength value="16"/>
+                <xsd:pattern value="\d{1,16}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="SMSStatus">
+        <xsd:annotation>
+            <xsd:documentation>
+                Status of SMS which was sent with sendSMSWithNotification
+                function
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="STATE_ACK"></xsd:enumeration>
+            <xsd:enumeration value="STATE_NACK"></xsd:enumeration>
+            <xsd:enumeration value="STATE_DELIVERED"></xsd:enumeration>
+            <xsd:enumeration value="STATE_NOT_DELIVERED"></xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
 
 </xsd:schema>
