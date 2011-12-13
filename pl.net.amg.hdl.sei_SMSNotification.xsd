@@ -3,10 +3,10 @@
     xmlns:smni="http://pl.net.amg.hdl.sei/SMSNotification"
     xmlns:smnt="http://pl.net.amg.hdl.sei.eto/SMSNotification"
     elementFormDefault="qualified"
-    targetNamespace="http://pl.net.amg.hdl.sei/SMSNotification">
+    targetNamespace="http://pl.net.amg.hdl.sei/SMSNotification"
+    version="2.0">
 
-    <xsd:import namespace="http://pl.net.amg.hdl.sei.eto/SMSNotification"
-        schemaLocation="pl.net.amg.hdl.sei.eto_SMSNotification.xsd" />
+    <xsd:import namespace="http://pl.net.amg.hdl.sei.eto/SMSNotification" schemaLocation="pl.net.amg.hdl.sei.eto_SMSNotification.xsd" />
 
     <xsd:element name="sendSMSNotification">
         <xsd:complexType>
@@ -15,12 +15,13 @@
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendSMSNotificationResponse">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="sendSMSNotificationReturn"
-                    nillable="true" type="xsd:boolean" />
+                <xsd:element name="sendSMSNotificationReturn" nillable="true" type="xsd:boolean" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
 </xsd:schema>

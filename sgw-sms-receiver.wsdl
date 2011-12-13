@@ -4,19 +4,22 @@
     xmlns:smni="http://pl.net.amg.hdl.sei/SMSNotification"
     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://pl.net.amg.hdl.sei/SMSReceiver">
+    targetNamespace="http://pl.net.amg.hdl.sei/SMSReceiver"
+    name="sgw-sms-receiver">
+
+    <wsdl:documentation>
+        Webservice for receiving SMS at PTK Centertel
+
+        Date: 2011-12-06
+        Version: 2.0
+    </wsdl:documentation>
 
     <wsdl:types>
-        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            elementFormDefault="unqualified">
-            <xsd:import namespace="http://pl.net.amg.hdl.sei.eto/SMSNotification"
-                schemaLocation="pl.net.amg.hdl.sei.eto_SMSNotification.xsd" />
-            <xsd:import namespace="http://pl.net.amg.hdl.sei/SMSNotification"
-                schemaLocation="pl.net.amg.hdl.sei_SMSNotification.xsd" />
-            <xsd:import namespace="http://pl.net.amg.hdl.sei.eto/SMSReceiver"
-                schemaLocation="pl.net.amg.hdl.sei.eto_SMSReceiver.xsd" />
-            <xsd:import namespace="http://pl.net.amg.hdl.sei/SMSReceiver"
-                schemaLocation="pl.net.amg.hdl.sei_SMSReceiver.xsd" />
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified">
+            <xsd:import namespace="http://pl.net.amg.hdl.sei.eto/SMSNotification" schemaLocation="pl.net.amg.hdl.sei.eto_SMSNotification.xsd" />
+            <xsd:import namespace="http://pl.net.amg.hdl.sei/SMSNotification" schemaLocation="pl.net.amg.hdl.sei_SMSNotification.xsd" />
+            <xsd:import namespace="http://pl.net.amg.hdl.sei.eto/SMSReceiver" schemaLocation="pl.net.amg.hdl.sei.eto_SMSReceiver.xsd" />
+            <xsd:import namespace="http://pl.net.amg.hdl.sei/SMSReceiver" schemaLocation="pl.net.amg.hdl.sei_SMSReceiver.xsd" />
         </xsd:schema>
     </wsdl:types>
 
@@ -35,21 +38,19 @@
 
     <wsdl:portType name="SMSReceiverPort">
         <wsdl:operation name="sendSMSReceiver">
+            <wsdl:documentation>Call for receiving SMS content</wsdl:documentation>
             <wsdl:input message="smri:sendSMSReceiverRequest" name="sendSMSReceiverRequest" />
-            <wsdl:output message="smri:sendSMSReceiverResponse"
-                name="sendSMSReceiverResponse" />
+            <wsdl:output message="smri:sendSMSReceiverResponse" name="sendSMSReceiverResponse" />
         </wsdl:operation>
         <wsdl:operation name="sendSMSNotification">
-            <wsdl:input message="smri:sendSMSNotificationRequest"
-                name="sendSMSNotificationRequest" />
-            <wsdl:output message="smri:sendSMSNotificationResponse"
-                name="sendSMSNotificationResponse" />
+            <wsdl:documentation>Call for receiving SMS notification</wsdl:documentation>
+            <wsdl:input message="smri:sendSMSNotificationRequest" name="sendSMSNotificationRequest" />
+            <wsdl:output message="smri:sendSMSNotificationResponse" name="sendSMSNotificationResponse" />
         </wsdl:operation>
     </wsdl:portType>
 
     <wsdl:binding name="SMSReceiverSoapBinding" type="smri:SMSReceiverPort">
-        <soap:binding style="document"
-            transport="http://schemas.xmlsoap.org/soap/http" />
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
         <wsdl:operation name="sendSMSReceiver">
             <soap:operation soapAction="sendSMSReceiver" style="document" />
             <wsdl:input name="sendSMSReceiverRequest">
@@ -60,8 +61,7 @@
             </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="sendSMSNotification">
-            <soap:operation soapAction="sendSMSNotification"
-                style="document" />
+            <soap:operation soapAction="sendSMSNotification" style="document" />
             <wsdl:input name="sendSMSNotificationRequest">
                 <soap:body use="literal" />
             </wsdl:input>

@@ -3,10 +3,10 @@
     xmlns:smri="http://pl.net.amg.hdl.sei/SMSReceiver"
     xmlns:smrt="http://pl.net.amg.hdl.sei.eto/SMSReceiver"
     elementFormDefault="qualified"
-    targetNamespace="http://pl.net.amg.hdl.sei/SMSReceiver">
+    targetNamespace="http://pl.net.amg.hdl.sei/SMSReceiver"
+    version="2.0">
 
-    <xsd:import namespace="http://pl.net.amg.hdl.sei.eto/SMSReceiver"
-        schemaLocation="pl.net.amg.hdl.sei.eto_SMSReceiver.xsd" />
+    <xsd:import namespace="http://pl.net.amg.hdl.sei.eto/SMSReceiver" schemaLocation="pl.net.amg.hdl.sei.eto_SMSReceiver.xsd" />
 
     <xsd:element name="sendSMSReceiver">
         <xsd:complexType>
@@ -15,12 +15,13 @@
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
     <xsd:element name="sendSMSReceiverResponse">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="sendSMSReceiverReturn"
-                    nillable="true" type="xsd:boolean" />
+                <xsd:element name="sendSMSReceiverReturn" nillable="true" type="xsd:boolean" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
 </xsd:schema>

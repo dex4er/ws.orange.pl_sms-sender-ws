@@ -2,16 +2,16 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:smnt="http://pl.net.amg.hdl.sei.eto/SMSNotification"
     elementFormDefault="qualified"
-    targetNamespace="http://pl.net.amg.hdl.sei.eto/SMSNotification">
+    targetNamespace="http://pl.net.amg.hdl.sei.eto/SMSNotification"
+    version="2.0">
 
     <xsd:complexType name="SMSNotificationETO">
         <xsd:sequence>
-            <xsd:element name="nrLa" minOccurs="1" nillable="true"
-                type="xsd:string" />
+            <xsd:element name="nrLa" minOccurs="1" nillable="true" type="xsd:string" />
             <xsd:element name="fromMsisdn" minOccurs="1" type="xsd:string" />
-            <xsd:element name="transactionId" minOccurs="1"
-                type="xsd:string" />
+            <xsd:element name="transactionId" minOccurs="1" type="xsd:string" />
             <xsd:element name="status" minOccurs="1" type="xsd:string" />
         </xsd:sequence>
     </xsd:complexType>
+
 </xsd:schema>
