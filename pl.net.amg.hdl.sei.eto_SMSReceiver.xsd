@@ -7,10 +7,47 @@
 
     <xsd:complexType name="SMSReceiverETO">
         <xsd:sequence>
-            <xsd:element name="toLa" minOccurs="1" type="xsd:string" />
-            <xsd:element name="fromMsisdn" minOccurs="1" type="xsd:string" />
-            <xsd:element name="content" minOccurs="1" type="xsd:string" />
+            <xsd:element name="toLa" minOccurs="1" type="smrt:LaNumber" />
+            <xsd:element name="fromMsisdn" minOccurs="1" type="smrt:MSISDN" />
+            <xsd:element name="content" minOccurs="1" type="smrt:SMSContent" />
         </xsd:sequence>
     </xsd:complexType>
+
+    <xsd:simpleType name="MSISDN">
+        <xsd:annotation>
+            <xsd:documentation>
+                MSISDN number without country prefix or with 00
+                and country prefix
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="9" />
+            <xsd:maxLength value="30" />
+            <xsd:whiteSpace value="collapse" />
+            <xsd:pattern value="(00\d{11,28})|\d{9}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="LaNumber">
+        <xsd:annotation>
+                <xsd:documentation>
+                    LA number of receiver (maximal 16 digits)
+                </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+                <xsd:minLength value="1"/>
+                <xsd:maxLength value="16"/>
+                <xsd:pattern value="\d{1,16}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="SMSContent">
+        <xsd:annotation>
+            <xsd:documentation>UTF-8 string</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="1" />
+        </xsd:restriction>
+    </xsd:simpleType>
 
 </xsd:schema>
