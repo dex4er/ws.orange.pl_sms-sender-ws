@@ -4,7 +4,7 @@
     xmlns:smrt="http://pl.net.amg.hdl.sei.eto/SMSReceiver"
     elementFormDefault="qualified"
     targetNamespace="http://pl.net.amg.hdl.sei/SMSReceiver"
-    version="2.0">
+    version="2.1">
 
     <xsd:import namespace="http://pl.net.amg.hdl.sei.eto/SMSReceiver" schemaLocation="pl.net.amg.hdl.sei.eto_SMSReceiver.xsd" />
 
