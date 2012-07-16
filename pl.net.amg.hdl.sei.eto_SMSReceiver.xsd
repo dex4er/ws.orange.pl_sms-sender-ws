@@ -3,7 +3,7 @@
     xmlns:smrt="http://pl.net.amg.hdl.sei.eto/SMSReceiver"
     elementFormDefault="qualified"
     targetNamespace="http://pl.net.amg.hdl.sei.eto/SMSReceiver"
-    version="2.1">
+    version="2.2">
 
     <xsd:complexType name="SMSReceiverETO">
         <xsd:sequence>
@@ -45,9 +45,7 @@
         <xsd:annotation>
             <xsd:documentation>UTF-8 string</xsd:documentation>
         </xsd:annotation>
-        <xsd:restriction base="xsd:string">
-            <xsd:minLength value="1" />
-        </xsd:restriction>
+        <xsd:restriction base="xsd:string" />
     </xsd:simpleType>
 
 </xsd:schema>

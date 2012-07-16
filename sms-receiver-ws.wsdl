@@ -10,8 +10,8 @@
     <wsdl:documentation>
         Webservice for receiving SMS at PTK Centertel
 
-        Date: 2011-12-14
-        Version: 2.1
+        Date: 2012-07-16
+        Version: 2.2
     </wsdl:documentation>
 
     <wsdl:types>
