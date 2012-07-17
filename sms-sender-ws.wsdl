@@ -265,7 +265,7 @@
 
     <wsdl:service name="SMSSenderEnablerRemoteService_V2_0">
         <wsdl:port binding="smsi:SMSSenderEnablerRemoteSoapBinding_V2_0" name="SMSSenderEnablerRemote_V2_0">
-            <soap:address location="http://sgw-sc:8380/security-backend/services/smsEnabler" />
+            <soap:address location="https://ws.orange.pl/sms-sender-ws/" />
         </wsdl:port>
     </wsdl:service>
 

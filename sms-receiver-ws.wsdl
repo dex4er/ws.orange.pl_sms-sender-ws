@@ -73,7 +73,7 @@
 
     <wsdl:service name="SMSReceiverService">
         <wsdl:port binding="smri:SMSReceiverSoapBinding" name="SMSReceiverPort">
-            <soap:address location="http://localhost:8980/services/SMSReceiver" />
+            <soap:address location="https://localhost/sms-receiver-ws/" />
         </wsdl:port>
     </wsdl:service>
 
