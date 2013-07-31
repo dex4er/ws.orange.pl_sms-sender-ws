@@ -1,11 +1,17 @@
 #!/usr/bin/env perl
 
-# Standalone server
+# PSGI application
+#
+# Install libraries:
+# $ cpanm XML::Compile::SOAP::Daemon Plack::Middleware::TrafficLog
+#
+# Run server:
+# $ plackup sms-receiver-ws-server.pl
 
 use warnings;
 use strict;
 
-use XML::Compile::SOAP::Daemon::NetServer;
+use XML::Compile::SOAP::Daemon::PSGI;
 use XML::Compile::WSDL11;
 use XML::Compile::SOAP11;
 
@@ -18,19 +24,21 @@ my $wsdl_filename = 'sms-receiver-ws.wsdl';
 my $wsdl = XML::Compile::WSDL11->new($wsdl_filename);
 $wsdl->importDefinitions( [ <pl.net.amg.hdl.*.xsd> ] );
 
-my $daemon = My::XML::Compile::SOAP::Daemon::NetServer->new;
+my $daemon = XML::Compile::SOAP::Daemon::PSGI->new;
 
 $daemon->operationsFromWSDL(
     $wsdl,
     callbacks => {
         sendSMSReceiver => sub {
             my ($soap, $data) = @_;
+            # your code here
             return +{
                 sendSMSReceiverReturn => 1,
             };
         },
         sendSMSNotification => sub {
             my ($soap, $data) = @_;
+            # your code here
             return +{
                 sendSMSNotificationReturn => 1,
             };
@@ -40,24 +48,25 @@ $daemon->operationsFromWSDL(
 
 $daemon->setWsdlResponse($wsdl_filename);
 
-$daemon->run(
-    port => $ARGV[0] || 5000,
-    name => $0,
-);
+my $sms_receiver_ws_app = $daemon->to_app;
 
 
-package My::XML::Compile::SOAP::Daemon::NetServer;
-use base 'XML::Compile::SOAP::Daemon::NetServer';
-use Log::Report syntax => 'SHORT';
+# Full debugging of requests and responses
 
-sub default_values {
-    +{ log_file => 'Log::Report', log_level => 2, client_maxreq => 1, client_reqbonus => 0, client_timeout => 30 }
+use Plack::Builder;
+
+my $app = builder {
+    enable 'TrafficLog';
+    $sms_receiver_ws_app;
+};
+
+# Run as standalone script or as a PSGI app
+
+unless (caller) {
+    require Plack::Runner;
+    my $runner = Plack::Runner->new;
+    $runner->parse_options(@ARGV);
+    return $runner->run($app);
 }
 
-sub process {
-    my $self = shift;
-    notice "Request\n---\n" . $_[1]->as_string . "---";
-    my @response = $self->SUPER::process(@_);
-    notice "Response\n---\n" . $response[2]->toString . "---";
-    return @response;
-}
+return $app;
